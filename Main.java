@@ -43,7 +43,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите строку: ");
         String userInput = scanner.nextLine();
-        getNumberInString(userInput);
+        try {
+            getNumberInString(userInput);
+        }
+        catch (Exception e) {
+            System.out.println("Ошибка: " + e.getMessage());
+        }
     }
 
     public static <T> void changeElements(T[] array, int index1, int index2) throws Exception {
